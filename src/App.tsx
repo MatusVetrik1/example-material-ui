@@ -60,11 +60,10 @@ const client = createClient({
 //   }
 // );
 
-console.log('Site is live 3');
+console.log('Site is live');
 
-console.log('Netlify', process.env.NETLIFY);
-console.log('Repo', process.env.REPOSITORY_URL);
-console.log('Branch', process.env.BRANCH);
+console.log('Repo', import.meta.REPOSITORY_URL);
+console.log('Branch', import.meta.VITE_BRANCH);
 
 const App = () => {
   const routing = useRoutes(routes);
