@@ -33,6 +33,7 @@ export default ({ command, mode }) => {
         mode,
         graphQLEndpoint: process.env.VITE_HASURA_GRAPHQL_ENDPOINT,
         cwd: process.cwd(),
+        env: process.env,
         // version: "workspace:*",
         injectMode: Boolean(process.env.GITPOD_WORKSPACE_ID)
           ? 'devServer'

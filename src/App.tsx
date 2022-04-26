@@ -62,7 +62,7 @@ const client = createClient({
 
 console.log('Site is live');
 
-console.log('Repo', import.meta.env.REPOSITORY_URL);
+console.log('Repo', import.meta.env.VITE_REPOSITORY_URL);
 console.log('Branch', import.meta.env.VITE_BRANCH);
 
 const App = () => {
