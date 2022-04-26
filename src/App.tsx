@@ -23,6 +23,7 @@ import {
   fetchExchange,
   Provider as UrqlProvider
 } from 'urql';
+import { EventNoteTwoTone } from '@mui/icons-material';
 
 const graphqlcodegenDataProvider = new GraphqlcodegenDataProvider(
   graphqlgen,
@@ -64,6 +65,10 @@ console.log('Site is live');
 
 console.log('Repo', import.meta.env.VITE_REPOSITORY_URL);
 console.log('Branch', import.meta.env.VITE_BRANCH);
+
+const url = 'https://github.com/MatusVetrik1/example-material-ui';
+const changed = url.replace('https://github.com/', '');
+console.log('Changed:', changed);
 
 const App = () => {
   const routing = useRoutes(routes);
