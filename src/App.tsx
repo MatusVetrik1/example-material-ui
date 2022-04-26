@@ -61,14 +61,15 @@ const client = createClient({
 //   }
 // );
 
-console.log('Site is live');
+const repository = import.meta.env.VITE_REPOSITORY_URL;
+const branch = import.meta.env.VITE_BRANCH;
 
-console.log('Repo', import.meta.env.VITE_REPOSITORY_URL);
-console.log('Branch', import.meta.env.VITE_BRANCH);
-
-const url = 'https://github.com/MatusVetrik1/example-material-ui';
-const changed = url.replace('https://github.com/', '');
-console.log('Changed:', changed);
+console.log('Repo', repository);
+console.log(
+  'RepositoryNameWithOwner',
+  repository.toString().replace('https://github.com/', '')
+);
+console.log('Branch', branch);
 
 const App = () => {
   const routing = useRoutes(routes);
